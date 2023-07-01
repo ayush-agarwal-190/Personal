@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Player CSV</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function createPlayerCSV() {
+            $.ajax({
+                url: "create_csv.php",
+                method: "POST",
+                success: function(response) {
+                    alert("Player CSV file created successfully!");
+                },
+                error: function() {
+                    alert("Error creating player CSV file!");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Create Player CSV</h1>
+    <button onclick="createPlayerCSV()">Create CSV</button>
+</body>
+</html>
